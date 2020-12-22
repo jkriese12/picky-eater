@@ -58,6 +58,11 @@ li,
 p {
   color: black;
 }
+
+p {
+  color: black;
+}
+
 li {
   font-size: 1.25rem;
 }
@@ -78,12 +83,15 @@ a:visited {
   display: flex;
   flex-direction: row;
 }
+
 #switch1 {
   padding-right: 10rem;
 }
+
 #switch2 {
   padding-right: 10rem;
 }
+
 #switch3 {
   padding-right: 10rem;
 }
