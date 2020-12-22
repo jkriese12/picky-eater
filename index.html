@@ -1,119 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=“en”>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset=“UTF-8" />
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0" />
     <!-- Foundation Compressed CSS -->
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
-      crossorigin="anonymous"
+      rel=“stylesheet”
+      href=“https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css”
+      integrity=“sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=”
+      crossorigin=“anonymous”
     />
     <!-- Local CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel=“stylesheet” href=“style.css” />
     <title>Picky Eater</title>
   </head>
-
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset=“UTF-8” />
+  <meta name=“viewport” content=“width=device-width, initial-scale=1.0” />
   <!-- Foundation Compressed CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+  <link rel=“stylesheet” href=“https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css”
+    integrity=“sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=” crossorigin=“anonymous”>
   <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+  <link rel=“preconnect” href=“https://fonts.gstatic.com”>
+  <link href=“https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap” rel=“stylesheet”>
   <!-- Local CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel=“stylesheet” href=“style.css” />
   <title>Picky Eater</title>
 </head>
-
 <body>
-
-  <nav class="navbar">
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text" style="color: white;">Picky Eater</li>
+  <nav class=“navbar”>
+    <div class=“top-bar”>
+      <div class=“top-bar-left”>
+        <ul class=“dropdown menu” data-dropdown-menu>
+          <li class=“menu-text” style=“color: white;“>Picky Eater</li>
           <li>
-            <a href="#">One</a>
+            <a href=“#”>One</a>
           </li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
+          <li><a href=“#”>Two</a></li>
+          <li><a href=“#”>Three</a></li>
         </ul>
       </div>
-      <!-- <div class="top-bar-right">
-        <ul class="menu">
-          <li><input type="search" placeholder="Search"></li>
-          <li><button type="button" class="button">Search</button></li>
+      <div class=“top-bar-right”>
+        <ul class=“menu”>
+          <li><input type=“search” placeholder=“Search For A Recipe”></li>
+          <li><button id=“searchBtn” type=“button” class=“button”>Search</button></li>
         </ul>
-      </div> -->
+      </div>
     </div>
   </nav>
-
   <!-- Hero image -->
-
   <header>
-    <div class="hero-image" style="color: rgb(255, 255, 255);">
-      <div class="hero-text" style="text-align: center;">
-        <h1 class="hero-title">PICKY<svg class="heart" viewBox="0 0 32 29.6">
-          <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
-          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
-        </svg>EATER</h1>
-        <p class="hero-lead" style="text-align: center;"><em>Recipes for people with food sensitivity or
+    <div class=“hero-image” style=“color: rgb(255, 255, 255);“>
+      <div class=“hero-text” style=“text-align: center;“>
+        <h1 class=“hero-title”>PICKY<svg class=“heart” viewBox=“0 0 32 29.6”>
+            <path d=“M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z” />
+          </svg>EATER</h1>
+        <p class=“hero-lead” style=“text-align: center;“><em>Recipes for people with food sensitivity or
             intolerance.</em> </p>
-        <!-- <button type="hero-button" class="button radius bordered shadow warning" style="text-align: center; background-color: rgb(255, 255, 255); color: black;"></button> -->
-        <a href="#" type="heroButton" id="buttonAbout" class="button radius bordered shadow warning"
-          style="color: white;">Learn More</a>
-        <a href="#" type="heroButton" id="buttonMore" class="button radius bordered shadow warning"
-          style="color: white;">View Recipes</a>
+        <!-- <button type=“hero-button” class=“button radius bordered shadow warning” style=“text-align: center; background-color: rgb(255, 255, 255); color: black;“></button> -->
+        <a href=“#” type=“heroButton” id=“buttonAbout” class=“button radius bordered shadow warning”
+          style=“color: white;“>Learn More</a>
+        <a href=“#” type=“heroButton” id=“buttonMore” class=“button radius bordered shadow warning”
+          style=“color: white;“>View Recipes</a>
       </div>
     </div>
   </header>
-  <!-- Anchors (links) -->
-  <!-- <label>
-      What books did you read over summer break?
-      <textarea placeholder="None"></textarea>
-    </label> -->
-
-  <!-- <a href="about.html" class="button">Learn More</a>
-    <a href="#features" class="button">View All Features</a> -->
-
   <!-- Buttons (actions) -->
-  <div id="pickySwitch" class="container">
-    <p>Do you want gluten-free?</p>
-    <div id="switch1" class="switch tiny">
-      <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
-      <label class="switch-paddle" for="tinySwitch">
-        <span class="show-for-sr">gluten-free</span>
+  <div id=“pickySwitch” class=“container grid-x grid-padding-x align-center”>
+    <div id=“switch1” class=“switch tiny”>
+      <p>Do you want gluten-free?</p>
+      <input class=“switch-input” id=“tinySwitch” type=“checkbox” name=“exampleSwitch”>
+      <label class=“switch-paddle” for=“tinySwitch”>
+        <span class=“show-for-sr”>gluten-free</span>
       </label>
     </div>
-
-    <p>Do you want vegan?</p>
-    <div id="switch2" class="switch tiny">
-      <input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">
-      <label class="switch-paddle" for="largeSwitch">
-        <span class="show-for-sr">vegan</span>
+    <div id=“switch2" class=“switch tiny”>
+      <p>Do you want vegan?</p>
+      <input class=“switch-input” id=“tinySwitch2” type=“checkbox” name=“exampleSwitch”>
+      <label class=“switch-paddle” for=“tinySwitch2”>
+        <span class=“show-for-sr”>vegan</span>
       </label>
     </div>
-
-    <p>Do you want dairy-free?</p>
-    <div id="switch2" class="switch tiny">
-      <input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">
-      <label class="switch-paddle" for="largeSwitch">
-        <span class="show-for-sr">dairy-free</span>
+    <div id=“switch3” class=“switch tiny”>
+      <p>Do you want dairy-free?</p>
+      <input class=“switch-input” id=“tinySwitch3" type=“checkbox” name=“exampleSwitch”>
+      <label class=“switch-paddle” for=“tinySwitch3">
+        <span class=“show-for-sr”>dairy-free</span>
       </label>
     </div>
   </div>
-
-
+  <br>
   <!-- Scrolling cell block for rendered recipe -->
-
-  <div id="recipeContainer" class="container">
-    <div id="recipeScroll" class="cell medium-8 medium-cell-block-y">
-      <h2 class="recipeH2" style="text-align: center;">Here's your recipe!</h2>
+  <div id=“recipeContainer” class=“container”>
+    <div id=“recipeScroll” class=“cell medium-8 medium-cell-block-y”>
+      <h2 class=“recipeH2" style=“text-align: center;“>Here’s your recipe!</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus odio, accumsan id ullamcorper
         eget, varius nec erat. Nulla facilisi. Donec dui felis, euismod nec finibus vitae, dapibus quis arcu.
         Maecenas tempor et ipsum quis venenatis. Ut posuere sed augue sit amet efficitur. Sed imperdiet, justo id
@@ -156,30 +137,21 @@
         lobortis nisi quis lacinia pharetra.</p>
     </div>
   </div>
-
   <!-- Footer content -->
-  <footer id="pickyFooter" style="width: 100%;">
-    <div class="cell shrink footer" style="text-align: center;">
-      <div class="footer" style="background-color: white; color: black;">
+  <footer id=“pickyFooter” style=“width: 100%;“>
+    <div class=“cell shrink footer” style=“text-align: center;“>
+      <div class=“footer” style=“background-color: white; color: black;“>
         <h6>&#169; Picky Eater Dev Team 2020</h6>
       </div>
   </footer>
-
   </div>
-
-
-
-
-
-  
-
     <!-- Compressed JavaScript -->
     <script
-      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-      integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o="
-      crossorigin="anonymous"
+      src=“https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js”
+      integrity=“sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=”
+      crossorigin=“anonymous”
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src=“https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js”></script>
+    <script src=“script.js”></script>
   </body>
 </html>

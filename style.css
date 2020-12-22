@@ -1,98 +1,100 @@
 * {
-    font-family: 'Gochi Hand', cursive;
+  font-family: ‘Gochi Hand’, cursive;
 }
-
-
-body, html {
-    height: 100%;    
+body,
+html {
+  height: 100%;
 }
-
 h6 {
-    font-family: 'Gochi Hand', cursive;
-    font-size: 1rem; 
+  font-family: ‘Gochi Hand’, cursive;
+  font-size: 1rem;
 }
-
 .hero-image {
-    background-image: url("assets/healthyhero.jpg");
-    background-image: linear-gradient(rgba(247, 49, 49, 0.5), rgba(0, 0, 0, 0.5)), url("assets/healthyhero.jpg");
-    background-size: cover;
-    padding-top: 70px;
-    padding-bottom: 70px;
+  background-image: url(“assets/healthyhero.jpg”);
+  background-image: linear-gradient(rgba(247, 49, 49, 0.5), rgba(0, 0, 0, 0.5)),
+    url(“assets/healthyhero.jpg”);
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
-
 .heart {
-    fill: red;
-    position: relative;
-    top: 5px;
-    width: 50px;
-    /* animation: pulse 1s ease infinite; */
-  }
-  
-  /* @keyframes pulse {
+  fill: red;
+  position: relative;
+  top: 5px;
+  width: 50px;
+  /* animation: pulse 1s ease infinite; */
+}
+/* @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.3); }
     100% { transform: scale(1); }
   } */
-
 .hero-title {
-    padding-right: 40px;
-    text-shadow: 1px 1px black;
-    font-family: 'Gochi Hand', cursive;
-    font-size: 5rem;
+  padding-right: 40px;
+  text-shadow: 1px 1px black;
+  font-family: ‘Gochi Hand’, cursive;
+  font-size: 5rem;
 }
-
 .hero-lead {
-    padding-right: 40px;
-    text-shadow: 1px 1px black;
-    font-family: 'Gochi Hand', cursive;
-    font-size: 2rem;
+  padding-right: 40px;
+  text-shadow: 1px 1px black;
+  font-family: ‘Gochi Hand’, cursive;
+  font-size: 2rem;
 }
-
 .button {
-    text-shadow: 1px 1px black;
-    margin-left: 0rem;
-    margin-right: 2rem;
-    font-size: 1rem;
+  text-shadow: 1px 1px black;
+  margin-left: 0rem;
+  margin-right: 2rem;
+  font-size: 1rem;
 }
-
-div.top-bar, ul, li, .menu, .dropdown.menu {
-    /* background-color: rgb(247, 49, 49); */
-    background-color: black;
+div.top-bar,
+ul,
+li,
+.menu,
+.dropdown.menu {
+  /* background-color: rgb(247, 49, 49); */
+  background-color: black;
 }
-
+p {
+  color: black;
+}
 li {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
-
 a {
-    color: white;
+  color: white;
 }
-
 a:hover {
-    color: rgb(247, 49, 49);
+  color: tan;
 }
-
 a:visited {
-    color: tan;
+  color: rgb(247, 49, 49);
 }
-
 .recipeH2 {
-    font-family: 'Gochi Hand', cursive;
+  font-family: ‘Gochi Hand’, cursive;
 }
-
 #pickySwitch {
-    text-align: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
 }
-
+#switch1 {
+  padding-right: 10rem;
+}
+#switch2 {
+  padding-right: 10rem;
+}
+#switch3 {
+  padding-right: 10rem;
+}
 .container {
-    margin-top: 10px;
-    margin-bottom: none;
-    padding-left: 40px;
-    padding-right: 40px;
+  margin-top: 10px;
+  margin-bottom: none;
+  padding-left: 40px;
+  padding-right: 40px;
 }
-
 #pickyFooter {
-    width: 100%;
-    padding-top: 1rem;
-    padding-bottom: 0rem;   
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
 }
