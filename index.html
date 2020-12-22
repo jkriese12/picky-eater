@@ -15,142 +15,163 @@
     <title>Picky Eater</title>
   </head>
 
-  <body>
-    <!-- Anchors (links) -->
 
-    <label>
-      What books did you read over summer break?
-      <textarea placeholder="None"> 5454</textarea>
-    </label>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Foundation Compressed CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+  <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <title>Picky Eater</title>
+</head>
 
-    <a href="about.html" class="button">Learn More</a>
-    <a href="#features" class="button">View All Features</a>
+<body>
 
-    <!-- Buttons (actions) -->
-    <button type="button" class="success button">Save</button>
-    <button type="button" class="alert button">Delete</button>
-
-    <div class="grid-y medium-grid-frame">
-      <div class="cell shrink header medium-cell-block-container">
-        <h1>Grid Frame Header</h1>
-        <div class="grid-x grid-padding-x">
-          <div class="cell medium-4">A medium 4 cell</div>
-          <div class="cell medium-4 medium-cell-block">
-            <p style="width: 80vw">
-              A medium 4 cell block... on medium this content should overflow and let you
-              horizontally scroll across... one might use this for an array of options
-            </p>
-          </div>
-          <div class="cell medium-4">A medium 4 cell</div>
-        </div>
+  <nav class="navbar">
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text" style="color: white;">Picky Eater</li>
+          <li>
+            <a href="#">One</a>
+          </li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
       </div>
-      <div class="cell medium-auto medium-cell-block-container">
-        <div class="grid-x grid-padding-x">
-          <div class="cell medium-4 medium-cell-block-y">
-            <h2>Independent scrolling sidebar</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus odio,
-              accumsan id ullamcorper eget, varius nec erat. Nulla facilisi. Donec dui
-              felis, euismod nec finibus vitae, dapibus quis arcu. Maecenas tempor et
-              ipsum quis venenatis. Ut posuere sed augue sit amet efficitur. Sed
-              imperdiet, justo id tempus rhoncus, est est viverra turpis, non vulputate
-              magna lectus et nisl. Pellentesque ultrices porttitor vehicula. Ut aliquet
-              efficitur ligula, a consectetur felis. Proin tristique ut augue nec luctus.
-              Curabitur a sapien pretium, auctor elit a, efficitur erat. Donec tincidunt
-              dui vel velit bibendum euismod. Cras vitae nibh dui. Aliquam erat volutpat.
-              Etiam sit amet arcu a erat efficitur facilisis. Ut viverra dapibus turpis,
-              et ornare justo. Integer in dui cursus, dignissim tortor a, hendrerit risus.
-            </p>
+      <!-- <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+      </div> -->
+    </div>
+  </nav>
 
-            <p>
-              Suspendisse pulvinar, massa iaculis feugiat lobortis, dolor sapien
-              vestibulum nulla, vel cursus tellus leo in lorem. Aliquam eu placerat urna.
-              Suspendisse sed viverra orci, ut mattis neque. Fusce non ultrices nisi. In
-              sagittis varius mollis. Quisque dolor quam, consectetur eu lacinia ac,
-              ullamcorper vel arcu. Nullam mattis imperdiet nulla sed ornare. Praesent
-              tristique, est id eleifend vestibulum, neque nibh condimentum ex, nec
-              lobortis purus justo a libero. Phasellus id ex ac nunc hendrerit hendrerit.
-              Nullam urna ipsum, rutrum at fringilla vel, venenatis non purus. Maecenas
-              egestas ex vitae venenatis molestie. Ut et odio egestas, accumsan neque et,
-              viverra nisl. Sed faucibus nec nulla sed imperdiet. Fusce quis sem ac urna
-              semper tempor a id elit. Nulla fringilla vitae sapien a vehicula.
-            </p>
-          </div>
-          <div class="cell medium-8 medium-cell-block-y">
-            <h2>Independent scrolling body</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus odio,
-              accumsan id ullamcorper eget, varius nec erat. Nulla facilisi. Donec dui
-              felis, euismod nec finibus vitae, dapibus quis arcu. Maecenas tempor et
-              ipsum quis venenatis. Ut posuere sed augue sit amet efficitur. Sed
-              imperdiet, justo id tempus rhoncus, est est viverra turpis, non vulputate
-              magna lectus et nisl. Pellentesque ultrices porttitor vehicula. Ut aliquet
-              efficitur ligula, a consectetur felis. Proin tristique ut augue nec luctus.
-              Curabitur a sapien pretium, auctor elit a, efficitur erat. Donec tincidunt
-              dui vel velit bibendum euismod. Cras vitae nibh dui. Aliquam erat volutpat.
-              Etiam sit amet arcu a erat efficitur facilisis. Ut viverra dapibus turpis,
-              et ornare justo. Integer in dui cursus, dignissim tortor a, hendrerit risus.
-            </p>
-            <p>
-              Suspendisse pulvinar, massa iaculis feugiat lobortis, dolor sapien
-              vestibulum nulla, vel cursus tellus leo in lorem. Aliquam eu placerat urna.
-              Suspendisse sed viverra orci, ut mattis neque. Fusce non ultrices nisi. In
-              sagittis varius mollis. Quisque dolor quam, consectetur eu lacinia ac,
-              ullamcorper vel arcu. Nullam mattis imperdiet nulla sed ornare. Praesent
-              tristique, est id eleifend vestibulum, neque nibh condimentum ex, nec
-              lobortis purus justo a libero. Phasellus id ex ac nunc hendrerit hendrerit.
-              Nullam urna ipsum, rutrum at fringilla vel, venenatis non purus. Maecenas
-              egestas ex vitae venenatis molestie. Ut et odio egestas, accumsan neque et,
-              viverra nisl. Sed faucibus nec nulla sed imperdiet. Fusce quis sem ac urna
-              semper tempor a id elit. Nulla fringilla vitae sapien a vehicula.
-            </p>
-            <p>
-              Nullam vestibulum lorem nec lectus egestas, nec ullamcorper diam maximus.
-              Maecenas condimentum, nibh at blandit semper, ex erat tempus magna, id
-              maximus neque velit accumsan nibh. Aenean dignissim lorem eu nisl laoreet
-              vestibulum. Vivamus efficitur et augue vitae tincidunt. Etiam et magna
-              felis. Integer mattis, nisi aliquet scelerisque blandit, ex mi sodales ante,
-              eget accumsan quam magna et ligula. Curabitur id tristique leo. Proin rutrum
-              mi vitae enim rhoncus, at cursus neque eleifend. Integer ultrices volutpat
-              tellus ac porta. Fusce sollicitudin venenatis lacinia. Fusce ante lorem,
-              gravida semper varius non, pharetra non erat. Sed dapibus arcu turpis, ac
-              sollicitudin nibh lacinia vel. Nullam at enim porta, luctus metus sit amet,
-              rutrum odio. Cras tempor enim vel pellentesque sollicitudin. Maecenas
-              ullamcorper, sem non accumsan volutpat, neque tortor pulvinar orci, ut
-              ultrices ligula lorem ut risus.
-            </p>
-            <p>
-              Aliquam facilisis, nibh eget posuere suscipit, arcu sapien iaculis odio, in
-              molestie dolor lectus vitae sem. Cras id nunc mollis mi rutrum dapibus.
-              Quisque rutrum a augue at scelerisque. Praesent faucibus ac enim vitae
-              gravida. Sed et sodales elit. Duis magna lectus, interdum sit amet metus a,
-              sagittis varius magna. Proin nibh lectus, egestas a luctus ut, dapibus et
-              enim. Curabitur fringilla ipsum vitae nunc imperdiet consectetur eget non
-              neque. Suspendisse ultricies odio quis lorem vulputate, ac vulputate turpis
-              feugiat. Maecenas posuere rhoncus orci, in ornare velit suscipit tempor.
-              Curabitur pretium nisl id lorem placerat consequat. In quis quam eros. Nam
-              mattis elit eu quam sagittis, in varius erat tempor.
-            </p>
-            <p>
-              Fusce felis magna, pellentesque eget mollis a, rutrum id eros. Curabitur
-              auctor varius arcu a consequat. Phasellus quis pulvinar enim, eu ultricies
-              justo. Pellentesque risus libero, dapibus at erat ultricies, gravida varius
-              erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-              posuere cubilia Curae; Nulla tempus, justo ut laoreet mollis, nunc tellus
-              convallis urna, vel pretium dui velit eget ligula. Aliquam semper sed nulla
-              a molestie. Maecenas at egestas massa, vitae aliquam mi. Fusce nec sem
-              egestas, pretium lacus non, tincidunt sapien. Sed tristique odio at
-              ultricies vulputate. Integer et convallis augue, eu aliquam enim. Mauris ut
-              faucibus diam. Donec vulputate nunc sed congue accumsan. Etiam lobortis nisi
-              quis lacinia pharetra.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="cell shrink footer">
-        <h3>Here's my footer</h3>
+  <!-- Hero image -->
+
+  <header>
+    <div class="hero-image" style="color: rgb(255, 255, 255);">
+      <div class="hero-text" style="text-align: center;">
+        <h1 class="hero-title">PICKY<svg class="heart" viewBox="0 0 32 29.6">
+          <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+        </svg>EATER</h1>
+        <p class="hero-lead" style="text-align: center;"><em>Recipes for people with food sensitivity or
+            intolerance.</em> </p>
+        <!-- <button type="hero-button" class="button radius bordered shadow warning" style="text-align: center; background-color: rgb(255, 255, 255); color: black;"></button> -->
+        <a href="#" type="heroButton" id="buttonAbout" class="button radius bordered shadow warning"
+          style="color: white;">Learn More</a>
+        <a href="#" type="heroButton" id="buttonMore" class="button radius bordered shadow warning"
+          style="color: white;">View Recipes</a>
       </div>
     </div>
+  </header>
+  <!-- Anchors (links) -->
+  <!-- <label>
+      What books did you read over summer break?
+      <textarea placeholder="None"></textarea>
+    </label> -->
+
+  <!-- <a href="about.html" class="button">Learn More</a>
+    <a href="#features" class="button">View All Features</a> -->
+
+  <!-- Buttons (actions) -->
+  <div id="pickySwitch" class="container">
+    <p>Do you want gluten-free?</p>
+    <div id="switch1" class="switch tiny">
+      <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+      <label class="switch-paddle" for="tinySwitch">
+        <span class="show-for-sr">gluten-free</span>
+      </label>
+    </div>
+
+    <p>Do you want vegan?</p>
+    <div id="switch2" class="switch tiny">
+      <input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">
+      <label class="switch-paddle" for="largeSwitch">
+        <span class="show-for-sr">vegan</span>
+      </label>
+    </div>
+
+    <p>Do you want dairy-free?</p>
+    <div id="switch2" class="switch tiny">
+      <input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">
+      <label class="switch-paddle" for="largeSwitch">
+        <span class="show-for-sr">dairy-free</span>
+      </label>
+    </div>
+  </div>
+
+
+  <!-- Scrolling cell block for rendered recipe -->
+
+  <div id="recipeContainer" class="container">
+    <div id="recipeScroll" class="cell medium-8 medium-cell-block-y">
+      <h2 class="recipeH2" style="text-align: center;">Here's your recipe!</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus odio, accumsan id ullamcorper
+        eget, varius nec erat. Nulla facilisi. Donec dui felis, euismod nec finibus vitae, dapibus quis arcu.
+        Maecenas tempor et ipsum quis venenatis. Ut posuere sed augue sit amet efficitur. Sed imperdiet, justo id
+        tempus rhoncus, est est viverra turpis, non vulputate magna lectus et nisl. Pellentesque ultrices
+        porttitor vehicula. Ut aliquet efficitur ligula, a consectetur felis. Proin tristique ut augue nec luctus.
+        Curabitur a sapien pretium, auctor elit a, efficitur erat. Donec tincidunt dui vel velit bibendum euismod.
+        Cras vitae nibh dui. Aliquam erat volutpat. Etiam sit amet arcu a erat efficitur facilisis. Ut viverra
+        dapibus turpis, et ornare justo. Integer in dui cursus, dignissim tortor a, hendrerit risus.</p>
+      <p>Suspendisse pulvinar, massa iaculis feugiat lobortis, dolor sapien vestibulum nulla, vel cursus tellus
+        leo in lorem. Aliquam eu placerat urna. Suspendisse sed viverra orci, ut mattis neque. Fusce non ultrices
+        nisi. In sagittis varius mollis. Quisque dolor quam, consectetur eu lacinia ac, ullamcorper vel arcu.
+        Nullam mattis imperdiet nulla sed ornare. Praesent tristique, est id eleifend vestibulum, neque nibh
+        condimentum ex, nec lobortis purus justo a libero. Phasellus id ex ac nunc hendrerit hendrerit. Nullam
+        urna ipsum, rutrum at fringilla vel, venenatis non purus. Maecenas egestas ex vitae venenatis molestie. Ut
+        et odio egestas, accumsan neque et, viverra nisl. Sed faucibus nec nulla sed imperdiet. Fusce quis sem ac
+        urna semper tempor a id elit. Nulla fringilla vitae sapien a vehicula.</p>
+      <p>Nullam vestibulum lorem nec lectus egestas, nec ullamcorper diam maximus. Maecenas condimentum, nibh at
+        blandit semper, ex erat tempus magna, id maximus neque velit accumsan nibh. Aenean dignissim lorem eu nisl
+        laoreet vestibulum. Vivamus efficitur et augue vitae tincidunt. Etiam et magna felis. Integer mattis, nisi
+        aliquet scelerisque blandit, ex mi sodales ante, eget accumsan quam magna et ligula. Curabitur id
+        tristique leo. Proin rutrum mi vitae enim rhoncus, at cursus neque eleifend. Integer ultrices volutpat
+        tellus ac porta. Fusce sollicitudin venenatis lacinia. Fusce ante lorem, gravida semper varius non,
+        pharetra non erat. Sed dapibus arcu turpis, ac sollicitudin nibh lacinia vel. Nullam at enim porta, luctus
+        metus sit amet, rutrum odio. Cras tempor enim vel pellentesque sollicitudin. Maecenas ullamcorper, sem non
+        accumsan volutpat, neque tortor pulvinar orci, ut ultrices ligula lorem ut risus.</p>
+      <p>Aliquam facilisis, nibh eget posuere suscipit, arcu sapien iaculis odio, in molestie dolor lectus vitae
+        sem. Cras id nunc mollis mi rutrum dapibus. Quisque rutrum a augue at scelerisque. Praesent faucibus ac
+        enim vitae gravida. Sed et sodales elit. Duis magna lectus, interdum sit amet metus a, sagittis varius
+        magna. Proin nibh lectus, egestas a luctus ut, dapibus et enim. Curabitur fringilla ipsum vitae nunc
+        imperdiet consectetur eget non neque. Suspendisse ultricies odio quis lorem vulputate, ac vulputate turpis
+        feugiat. Maecenas posuere rhoncus orci, in ornare velit suscipit tempor. Curabitur pretium nisl id lorem
+        placerat consequat. In quis quam eros. Nam mattis elit eu quam sagittis, in varius erat tempor.</p>
+      <p>Fusce felis magna, pellentesque eget mollis a, rutrum id eros. Curabitur auctor varius arcu a consequat.
+        Phasellus quis pulvinar enim, eu ultricies justo. Pellentesque risus libero, dapibus at erat ultricies,
+        gravida varius erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+        Curae; Nulla tempus, justo ut laoreet mollis, nunc tellus convallis urna, vel pretium dui velit eget
+        ligula. Aliquam semper sed nulla a molestie. Maecenas at egestas massa, vitae aliquam mi. Fusce nec sem
+        egestas, pretium lacus non, tincidunt sapien. Sed tristique odio at ultricies vulputate. Integer et
+        convallis augue, eu aliquam enim. Mauris ut faucibus diam. Donec vulputate nunc sed congue accumsan. Etiam
+        lobortis nisi quis lacinia pharetra.</p>
+    </div>
+  </div>
+
+  <!-- Footer content -->
+  <footer id="pickyFooter" style="width: 100%;">
+    <div class="cell shrink footer" style="text-align: center;">
+      <div class="footer" style="background-color: white; color: black;">
+        <h6>&#169; Picky Eater Dev Team 2020</h6>
+      </div>
+  </footer>
+
+  </div>
+
+
+
+
+
+  
 
     <!-- Compressed JavaScript -->
     <script
