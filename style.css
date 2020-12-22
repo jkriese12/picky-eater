@@ -55,6 +55,27 @@ h6 {
     font-size: 1rem;
 }
 
+div.top-bar, ul, li, .menu, .dropdown.menu {
+    /* background-color: rgb(247, 49, 49); */
+    background-color: black;
+}
+
+li {
+    font-size: 1.25rem;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(247, 49, 49);
+}
+
+a:visited {
+    color: tan;
+}
+
 .recipeH2 {
     font-family: 'Gochi Hand', cursive;
 }
