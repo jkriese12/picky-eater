@@ -60,6 +60,10 @@ div.top-bar, ul, li, .menu, .dropdown.menu {
     background-color: black;
 }
 
+p {
+    color: black;
+}
+
 li {
     font-size: 1.25rem;
 }
@@ -69,11 +73,11 @@ a {
 }
 
 a:hover {
-    color: rgb(247, 49, 49);
+    color: tan;
 }
 
 a:visited {
-    color: tan;
+    color: rgb(247, 49, 49);
 }
 
 .recipeH2 {
@@ -82,6 +86,20 @@ a:visited {
 
 #pickySwitch {
     text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#switch1 {
+    padding-right: 10rem;    
+}
+
+#switch2 {
+    padding-right: 10rem;
+}
+
+#switch3 {
+    padding-right: 10rem;
 }
 
 .container {
