@@ -1,0 +1,258 @@
+* {
+    font-family: 'Gochi Hand', cursive;
+}
+
+
+body, html {
+    height: 100%;    
+}
+
+#menu-text {
+    padding-left: 1rem;
+    padding-top: .5rem;
+    text-shadow: 1px 1px black;
+}
+
+h6 {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1rem; 
+}
+
+.hero-image {
+    background-image: url("assets/healthyhero.jpg");
+    background-image: linear-gradient(rgba(247, 49, 49, 0.5), rgba(0, 0, 0, 0.5)), url("assets/healthyhero.jpg");
+    background-size: cover;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.heart {
+    fill: red;
+    position: relative;
+    top: 5px;
+    width: 50px;
+  }
+
+.hero-title {
+    padding-right: 40px;
+    text-shadow: 1px 1px black;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 5rem;
+}
+
+.hero-lead {
+    padding-right: 40px;
+    text-shadow: 1px 1px black;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 2rem;
+}
+
+.button {
+    text-shadow: 1px 1px black;
+    margin-left: 0rem;
+    margin-right: 2rem;
+    font-size: 1rem;
+}
+
+div.top-bar, ul, li, ul.menu, .dropdown.menu {
+    background-color: #FFAE00;
+}
+
+p {
+    color: black;
+}
+
+li {
+    font-size: 1.25rem;
+}
+
+a {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+a:hover {
+    color: purple;
+}
+
+.recipeH2 {
+    font-family: 'Gochi Hand', cursive;
+}
+
+/* Displays switches horizontally on larger screens using display: flex; + flex-direction: row */
+
+#pickySwitch {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#switch1 {
+    padding-right: 10rem;    
+}
+
+#switch2 {
+    padding-right: 10rem;
+}
+
+#switch3 {
+    padding-right: 10rem;
+}
+
+.container {
+    margin-top: 10px;
+    margin-bottom: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: white;
+}
+
+#ingredients {
+    text-align: center;
+    font-family: 'Gochi Hand', cursive;
+    background-color: white;
+}
+
+ul.ingredientsList {
+    background-color: white;
+}
+
+ul {
+/* List-style-type: none removes bullets from list */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+li.ingredient  {
+    background-color: white;
+}
+
+#instructions {
+    text-align: center;
+    font-family: 'Gochi Hand', cursive;
+    background-color: white;
+}
+
+li.step {
+    background-color: white;
+}
+
+#recipeTips {
+    font-family: 'Gochi Hand', cursive;
+}
+
+#pickyFooter {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 0rem;   
+}
+
+/* Media queries */
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    .hero-title {
+        font-size: 3rem;
+        padding-left: 1.5rem;
+    }
+
+    .hero-lead {
+        padding-left: 2rem;
+        font-size: 2rem;
+    }
+
+    #switch1 {
+        padding-right: 1rem;  
+        padding-bottom: 5rem;  
+    }
+    
+    #switch2 {
+        padding-right: 1rem;
+        padding-bottom: 5rem;
+    }
+    
+    #switch3 {
+        padding-right: 1rem;
+        padding-bottom: 3rem;
+    }
+     
+    #searchInput {
+        background-color: white;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    ul.menu {
+        background-color: #FFAE00;
+        text-align: center;
+    }
+
+    .button {
+        align-items: center;
+    }
+
+    #buttonAbout {
+        margin-left: 2.25rem;
+        font-size: 1rem;
+    }
+
+    #buttonMore {
+        font-size: 1rem;
+    }
+    
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    #switch1 {
+        padding-top: 3rem;
+        padding-right: 2rem;  
+        padding-bottom: 3rem;  
+        font-size: 1rem;
+    }
+    
+    #switch2 {
+        padding-top: 3rem;
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+        font-size: 1rem;
+    }
+    
+    #switch3 {
+        padding-top: 3rem;
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+        font-size: 1rem;
+    }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    #switch1 {
+        padding-top: 3rem;
+        padding-right: 6rem;  
+        padding-bottom: 4.5rem;  
+        font-size: 1.25rem;
+    }
+    
+    #switch2 {
+        padding-top: 3rem;
+        padding-right: 6rem;
+        padding-bottom: 4.5rem;
+        font-size: 1.25rem;
+    }
+    
+    #switch3 {
+        padding-top: 3rem;
+        padding-right: 0rem;
+        padding-bottom: 4.5rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
