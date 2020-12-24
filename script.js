@@ -28,20 +28,21 @@ function getRecipeID() {
         method: "GET",
       }).then(function (response) {
         console.log(response);
-        $("#ingredients").text(response.title);
-        $("#img").attr("src", response.image);
+        $("#ingredients").text("Recipe Ingredients:");
+        $("#instructions").text("Recipe Instructions:");
+        // $("#img").attr("src", response.image);
         // var listItems = $("<li>").text(response.extendedIngredients[i].name);
         for (var i = 0; i < response.extendedIngredients.length; i++) {
           JSON.stringify(response.extendedIngredients[i].name);
           var listItem = $("<li>");
           listItem.text(response.extendedIngredients[i].name);
-          $("#ingredients").append(listItem);
+          $("recipeIngredients").append(listItem);
         }
         for (var i = 0; i < response.analyzedInstructions[0].steps.length; i++) {
           var instructionItem = $("<li>");
           JSON.stringify(response.analyzedInstructions[0].steps[i].step);
           instructionItem.text(response.analyzedInstructions[0].steps[i].step);
-          $("#instructionsList").append(instructionItem);
+          $(".instructionsList").append(instructionItem);
         }
       });
     });
@@ -64,20 +65,21 @@ function getRecipeID() {
         method: "GET",
       }).then(function (response) {
         console.log(response);
-        $("#ingredients").text(response.title);
-        $("#img").attr("src", response.image);
+        $("#ingredients").text("Recipe Ingredients:");
+        $("#instructions").text("Recipe Instructions:");
+        // $("#img").attr("src", response.image);
         // var listItems = $("<li>").text(response.extendedIngredients[i].name);
         for (var i = 0; i < response.extendedIngredients.length; i++) {
           JSON.stringify(response.extendedIngredients[i].name);
           var listItem = $("<li>");
           listItem.text(response.extendedIngredients[i].name);
-          $("#ingredients").append(listItem);
+          $(".ingredientsList").append(listItem);
         }
         for (var i = 0; i < response.analyzedInstructions[0].steps.length; i++) {
           var instructionItem = $("<li>");
           JSON.stringify(response.analyzedInstructions[0].steps[i].step);
           instructionItem.text(response.analyzedInstructions[0].steps[i].step);
-          $("#instructionsList").append(instructionItem);
+          $(".instructionsList").append(instructionItem);
         }
       });
     });
