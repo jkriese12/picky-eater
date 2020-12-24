@@ -184,7 +184,7 @@ li.step {
     }
 
     ul.menu {
-        background-color: #FFAE00;
+        background-color: white;
         text-align: center;
     }
 
@@ -208,6 +208,11 @@ li.step {
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    #buttonAbout {
+        margin-left: 2.25rem;
+        font-size: 1rem;
+    }    
+    
     #switch1 {
         padding-top: 3rem;
         padding-right: 2rem;  
@@ -232,6 +237,11 @@ li.step {
 
 /* Large and up */
 @media screen and (min-width: 64em) {
+    #buttonAbout {
+        margin-left: 2.25rem;
+        font-size: 1rem;
+    }  
+    
     #switch1 {
         padding-top: 3rem;
         padding-right: 6rem;  
