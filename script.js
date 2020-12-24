@@ -12,7 +12,7 @@ function getRecipeID() {
   if (glutenCheck === true) {
     $.ajax({
       url:
-        "https://api.spoonacular.com/recipes/complexSearch?apiKey=bead57aed9e1420dbed8834d45b0f26e&diet=gluten-free&addRecipeInformation=true&query=" +
+        "https://api.spoonacular.com/recipes/complexSearch?apiKey=d62f94a01ecd492192a2ac5bb4bf78f9&diet=gluten-free&addRecipeInformation=true&query=" +
         id,
       method: "GET",
     }).then(function (response) {
@@ -22,21 +22,27 @@ function getRecipeID() {
       var urlID =
         "https://api.spoonacular.com/recipes/" +
         foodID +
-        "/information?apiKey=bead57aed9e1420dbed8834d45b0f26e";
+        "/information?apiKey=d62f94a01ecd492192a2ac5bb4bf78f9";
       $.ajax({
         url: urlID,
         method: "GET",
       }).then(function (response) {
         console.log(response);
+        console.log(response.sourceUrl);
         $("#ingredients").text("Recipe Ingredients:");
         $("#instructions").text("Recipe Instructions:");
-        // $("#img").attr("src", response.image);
+        $("#recipeName").text(response.title);
+        $("#img").attr("src", response.image);
+        var a = $("<a>");
+        a.attr("href", response.sourceUrl);
+        $(".tipsPanel").text(response.sourceUrl);
+
         // var listItems = $("<li>").text(response.extendedIngredients[i].name);
         for (var i = 0; i < response.extendedIngredients.length; i++) {
           JSON.stringify(response.extendedIngredients[i].name);
           var listItem = $("<li>");
           listItem.text(response.extendedIngredients[i].name);
-          $("recipeIngredients").append(listItem);
+          $(".ingredientsList").append(listItem);
         }
         for (var i = 0; i < response.analyzedInstructions[0].steps.length; i++) {
           var instructionItem = $("<li>");
@@ -49,7 +55,7 @@ function getRecipeID() {
   } else if (glutenCheck === false && veganCheck === false && dairyCheck === false) {
     $.ajax({
       url:
-        "https://api.spoonacular.com/recipes/complexSearch?apiKey=bead57aed9e1420dbed8834d45b0f26e&addRecipeInformation=true&query=" +
+        "https://api.spoonacular.com/recipes/complexSearch?apiKey=d62f94a01ecd492192a2ac5bb4bf78f9&addRecipeInformation=true&query=" +
         id,
       method: "GET",
     }).then(function (response) {
@@ -59,7 +65,7 @@ function getRecipeID() {
       var urlID =
         "https://api.spoonacular.com/recipes/" +
         foodID +
-        "/information?apiKey=bead57aed9e1420dbed8834d45b0f26e";
+        "/information?apiKey=d62f94a01ecd492192a2ac5bb4bf78f9";
       $.ajax({
         url: urlID,
         method: "GET",
@@ -67,6 +73,9 @@ function getRecipeID() {
         console.log(response);
         $("#ingredients").text("Recipe Ingredients:");
         $("#instructions").text("Recipe Instructions:");
+        $("#recipeName").text(response.title);
+        $("#img").attr("src", response.image);
+
         // $("#img").attr("src", response.image);
         // var listItems = $("<li>").text(response.extendedIngredients[i].name);
         for (var i = 0; i < response.extendedIngredients.length; i++) {
@@ -87,7 +96,8 @@ function getRecipeID() {
 }
 
 $("button").on("click", function () {
-  $("#instructionsList").empty();
+  $(".ingredientsList").empty();
+  $(".instructionsList").empty();
   getRecipeID();
 });
 // Recipe Name, Picture of recipe, Ingredient list, instructions, Time to cook
