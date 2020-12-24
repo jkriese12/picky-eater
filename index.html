@@ -23,9 +23,9 @@
     <div class="top-bar">
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li id="menu-text" style="color: white;"><i class="fas fa-utensils"></i></li>
-          <li><a id="navLink1" href="#">Featured Recipe</a></li>
-          <li><a id="navLink2" href="#">Saved Recipes</a></li>
+          <li id="menu-text" style="color: red;"><i class="fas fa-utensils"></i></li>
+          <li><a id="navLink1" style="color: red;" href="#">Featured Recipe</a></li>
+          <li><a id="navLink2" style="color: red;" href="#">Saved Recipes</a></li>
         </ul>
       </div>
       <div class="top-bar-right">
@@ -101,7 +101,7 @@
     <div id="recipeContainer" class="container">
       <!-- THE BELOW TWO LINES ARE DIFFERENT WAYS TO RENDER A RECIPE PHOTO - FIRST ONE IS COMMENTED OUT FOR BREVITY-->
       <!-- <img class="thumbnail" src="assets/healthyfood.jpg" alt="photo of healthy food"> -->
-      <a href="" class="thumbnail"><img src="" alt="photo of healthy recipe"></a>
+      <a href=""><img src="" aria-label="photo of healthy recipe"></a>
       <div id="recipeScroll" class="cell medium-8 medium-cell-block-y">
         <h2 id="recipeName" class="recipeH2" style="text-align: center;"></h2>
         <div id="recipeSummary" aria-placeholder="Recipe summary goes here">
@@ -109,7 +109,7 @@
         </div>
         <br>
 
-        <!-- Recipe ingredients -->            
+        <!-- Recipe ingredients -->              
 
         <div id="recipeIngredients" class="container">
           <h2 id="ingredients"></h2>
