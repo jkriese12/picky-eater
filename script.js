@@ -10,19 +10,20 @@ function getRecipeID() {
   var dairyCheck = $("#tinySwitch3").is(":checked");
   console.log(glutenCheck, veganCheck, dairyCheck);
   var dietChoice = "";
-  if (glutenCheck === true) {
+  if (glutenCheck === true && veganCheck === false && dairyCheck === false) {
     var dietChoice = "&diet=gluten-free";
-  } else if (glutenCheck && veganCheck === true) {
-    var dietChoice = "&diet=gluten-free,vegan";
-  } else if (glutenCheck && veganCheck && dairyCheck === true) {
+  } else if (glutenCheck === true && veganCheck === true && dairyCheck === false) {
+    var dietChoice = "&diet=vegan&intolerances=gluten";
+    alert("ok");
+  } else if (glutenCheck === true && veganCheck === true && dairyCheck === true) {
     var dietChoice = "&diet=gluten-free,vegan&intolerances=dairy";
-  } else if (glutenCheck && dairyCheck === true) {
+  } else if (glutenCheck === true && veganCheck === false && dairyCheck === true) {
     var dietChoice = "&diet=gluten-free&intolerances=dairy";
-  } else if (veganCheck === true) {
+  } else if (glutenCheck === false && veganCheck === true && dairyCheck === false) {
     var dietChoice = "&diet=vegan";
-  } else if (veganCheck && dairyCheck === true) {
+  } else if (glutenCheck === false && veganCheck === true && dairyCheck === true) {
     var dietChoice = "&diet=vegan&intolerances=dairy";
-  } else if (dairyCheck === true) {
+  } else if (glutenCheck === false && veganCheck === false && dairyCheck === true) {
     var dietChoice = "&intolerances=dairy";
   } else {
     var dietChoice = "";
@@ -54,7 +55,8 @@ function getRecipeID() {
       $("#img").attr("src", response.image);
       var a = $("<a>");
       a.attr("href", response.sourceUrl);
-      $(".tipsPanel").text(response.sourceUrl);
+      a.text(response.sourceUrl);
+      $(".tipsPanel").append(a);
 
       // var listItems = $("<li>").text(response.extendedIngredients[i].name);
       for (var i = 0; i < response.extendedIngredients.length; i++) {
