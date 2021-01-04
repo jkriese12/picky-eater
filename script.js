@@ -55,8 +55,12 @@ function getRecipeID() {
       $("#img").attr("src", response.image);
       var a = $("<a>");
       a.attr("href", response.sourceUrl);
+      a.attr("target", "blank");
       a.text(response.sourceUrl);
+      var button = $("<button>");
+      button.text("Save me?");
       $(".tipsPanel").append(a);
+      $(".tipsPanel").append(button);
 
       // var listItems = $("<li>").text(response.extendedIngredients[i].name);
       for (var i = 0; i < response.extendedIngredients.length; i++) {
@@ -78,8 +82,15 @@ function getRecipeID() {
 $("button").on("click", function () {
   $(".ingredientsList").empty();
   $(".instructionsList").empty();
+  $(".tipsPanel").empty();
+  $("#ingredients").text("");
+  $("#instructions").text("");
+  $("#recipeName").text("");
+  $("#img").attr("src", "");
+
   getRecipeID();
 });
+$(".tipsPanel").on("click", function () {});
 // Recipe Name, Picture of recipe, Ingredient list, instructions, Time to cook
 // Servings
 // 1 recipe response
