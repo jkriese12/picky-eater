@@ -93,15 +93,19 @@ a:hover {
 }
 
 #switch1 {
-    padding-right: 10rem;    
+    padding-right: 6rem;    
 }
 
 #switch2 {
-    padding-right: 10rem;
+    padding-right: 6rem;
 }
 
 #switch3 {
-    padding-right: 10rem;
+    padding-right: 6rem;
+}
+
+#switch4 {
+    padding-right: 6rem;
 }
 
 h2 {
@@ -221,7 +225,13 @@ li.step::marker {
         padding-bottom: 5rem;
     }
     
-    #switch3 {
+    #switch3 {        
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+    }
+
+    #switch4 {
+        padding-top: 2rem;
         padding-right: 2rem;
         padding-bottom: 3rem;
     }
@@ -264,22 +274,30 @@ li.step::marker {
     
     #switch1 {
         padding-top: 3rem;
-        padding-right: 2rem;  
+        padding-right: 1rem;  
         padding-bottom: 3rem;  
         font-size: 1rem;
     }
     
     #switch2 {
         padding-top: 3rem;
-        padding-right: 2rem;
+        padding-right: 1rem;
         padding-bottom: 3rem;
         font-size: 1rem;
     }
     
     #switch3 {
         padding-top: 3rem;
-        padding-right: 2rem;
+        padding-right: 1rem;
         padding-bottom: 3rem;
+        font-size: 1rem;
+    }
+
+    #switch4 {
+        padding-top: 3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 2rem;
         font-size: 1rem;
     }
 }
@@ -308,6 +326,14 @@ li.step::marker {
     #switch3 {
         padding-top: 3rem;
         padding-right: 0rem;
+        padding-bottom: 4.5rem;
+        font-size: 1.25rem;
+    }
+
+    #switch4 {
+        padding-top: 3rem;
+        padding-right: 0rem;
+        padding-left: 4.5rem;
         padding-bottom: 4.5rem;
         font-size: 1.25rem;
     }
