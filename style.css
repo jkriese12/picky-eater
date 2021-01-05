@@ -133,7 +133,11 @@ div.w3-container {
     background-color: white;
 }
 
-img#img {
+#img {
+    max-width: 100%;    
+}
+
+#imgContainer {
     text-align: center;
 }
 
