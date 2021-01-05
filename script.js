@@ -8,6 +8,46 @@ function getRecipeID() {
   var veganCheck = $("#tinySwitch2").is(":checked");
   var dairyCheck = $("#tinySwitch3").is(":checked");
   var weatherCheck = $("#tinySwitch4").is(":checked");
+  function getWeather() {
+    var city = "tahiti";
+    var currentDate = moment().format(" L");
+    var APIKey = "11c1419085b8b8abf0e987d8580426ea";
+    var queryURL =
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
+      city +
+      "&units=imperial&appid=" +
+      APIKey;
+    $.ajax({
+      url: queryURL,
+      method: "GET",
+    }).then(function (response) {
+      console.log(response);
+      // var date = $("<div>")
+      //   .text(response.name + currentDate)
+      //   .addClass("weather")
+      //   .css({ "text-align": "center", "font-size": "20px" });
+      var temp = $("<div>")
+        .text("Temperature: " + response.main.temp.toFixed(0) + " F")
+        .addClass("weather")
+        .css({ "text-align": "center", "font-size": "20px" });
+      var humid = $("<div>")
+        .text("Humidity: " + response.main.humidity + "%")
+        .addClass("weather")
+        .css({ "text-align": "center", "font-size": "20px" });
+      var wind = $("<div>")
+        .text("Wind Speed: " + response.wind.speed.toFixed(1) + " MPH")
+        .addClass("weather")
+        .css({ "text-align": "center", "font-size": "20px" });
+      var title = $("<div>")
+        .text("Here is the weather in Tahiti today - " + currentDate)
+        .addClass("weather")
+        .css({ "text-align": "center", "font-size": "30px" });
+      $(".renderedRecipe").append(title, temp, humid, wind);
+    });
+  }
+  if (weatherCheck === true) {
+    getWeather();
+  }
 
   var dietChoice = "";
   if (glutenCheck === true && veganCheck === false && dairyCheck === false) {
@@ -59,42 +99,6 @@ function getRecipeID() {
         a.text(response.sourceUrl);
 
         $(".tipsPanel").append(a);
-
-        var city = "tahiti";
-        var currentDate = moment().format(" L");
-        var APIKey = "11c1419085b8b8abf0e987d8580426ea";
-        var queryURL =
-          "https://api.openweathermap.org/data/2.5/weather?q=" +
-          city +
-          "&units=imperial&appid=" +
-          APIKey;
-        $.ajax({
-          url: queryURL,
-          method: "GET",
-        }).then(function (response) {
-          console.log(response);
-          // var date = $("<div>")
-          //   .text(response.name + currentDate)
-          //   .addClass("weather")
-          //   .css({ "text-align": "center", "font-size": "20px" });
-          var temp = $("<div>")
-            .text("Temperature: " + response.main.temp.toFixed(0) + " F")
-            .addClass("weather")
-            .css({ "text-align": "center", "font-size": "20px" });
-          var humid = $("<div>")
-            .text("Humidity: " + response.main.humidity + "%")
-            .addClass("weather")
-            .css({ "text-align": "center", "font-size": "20px" });
-          var wind = $("<div>")
-            .text("Wind Speed: " + response.wind.speed.toFixed(1) + " MPH")
-            .addClass("weather")
-            .css({ "text-align": "center", "font-size": "20px" });
-          var title = $("<div>")
-            .text("Here is the weather in Tahiti today - " + currentDate)
-            .addClass("weather")
-            .css({ "text-align": "center", "font-size": "30px" });
-          $(".renderedRecipe").append(title, temp, humid, wind);
-        });
 
         // var listItems = $("<li>").text(response.extendedIngredients[i].name);
         for (var i = 0; i < response.extendedIngredients.length; i++) {
