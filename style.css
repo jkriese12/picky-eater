@@ -13,6 +13,11 @@ body, html {
     text-shadow: 1px 1px black;
 }
 
+.toggleHeader {
+    font-family: 'Gochi Hand', cursive;
+    padding-top: 2rem;
+}
+
 h6 {
     font-family: 'Gochi Hand', cursive;
     font-size: 1rem; 
@@ -67,12 +72,12 @@ li {
 }
 
 a {
-    color: white;
+    color: red;
     text-shadow: 1px 1px black;
 }
 
 a:hover {
-    color: purple;
+    color: orange;
 }
 
 .recipeH2 {
@@ -99,12 +104,37 @@ a:hover {
     padding-right: 10rem;
 }
 
+h2 {
+    font-family: 'Gochi Hand', cursive;
+}
+
+button.w3-button {
+    text-shadow: 1px 1px black;
+}
+
+span.w3-button {
+    float: left;  
+}
+
+div.w3-container {
+    text-align: center;
+    padding-right: 3rem;    
+}
+
+.w3-container {
+    font-size: 1.25rem;
+}
+
 .container {
     margin-top: 10px;
     margin-bottom: none;
     padding-left: 40px;
     padding-right: 40px;
     background-color: white;
+}
+
+img#img {
+    text-align: center;
 }
 
 #ingredients {
@@ -126,6 +156,7 @@ ul {
 
 li.ingredient  {
     background-color: white;
+    text-align: center;
 }
 
 #instructions {
@@ -136,6 +167,11 @@ li.ingredient  {
 
 li.step {
     background-color: white;
+    text-align: center;
+}
+
+li.step::marker {
+    text-align: center;
 }
 
 #recipeTips {
@@ -152,6 +188,15 @@ li.step {
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
+    a#navLink1 {
+        font-size: 1rem;
+    }
+    
+      a#navLink2 {
+        font-size: 1rem;
+    }  
+    
+    
     .hero-title {
         font-size: 3rem;
         padding-left: 1.5rem;
@@ -163,17 +208,17 @@ li.step {
     }
 
     #switch1 {
-        padding-right: 1rem;  
+        padding-right: 2rem;  
         padding-bottom: 5rem;  
     }
     
     #switch2 {
-        padding-right: 1rem;
+        padding-right: 2rem;
         padding-bottom: 5rem;
     }
     
     #switch3 {
-        padding-right: 1rem;
+        padding-right: 2rem;
         padding-bottom: 3rem;
     }
      
