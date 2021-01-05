@@ -1,7 +1,7 @@
 // API KEY : bead57aed9e1420dbed8834d45b0f26e
 // change
 // change again
-var check = $("#tinySwitch");
+function renderWeather() {}
 
 function getRecipeID() {
   var id = $("input").val().trim();
@@ -89,8 +89,10 @@ $("#searchBtn").on("click", function () {
   $("#img").attr("src", "");
 
   getRecipeID();
+  renderWeather();
 });
 $(".tipsPanel").on("click", function () {});
+
 // Recipe Name, Picture of recipe, Ingredient list, instructions, Time to cook
 // Servings
 // 1 recipe response
