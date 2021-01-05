@@ -80,17 +80,12 @@ Visit the FOOD ACADEMY and FEATURED RECIPES above!
 
 
     
-
-
 #### Articles and sites which contributed toward the successful completion of this project are included below:
 
-[JavaScript Tutorial](https://www.javascripttutorial.net/) <br>
-[JavaScript.com](https://www.javascript.com/) <br>
-[JavaScript Timers Article on freeCodeCamp](https://www.freecodecamp.org/news/javascript-timers-everything-you-need-to-know-5f31eaa37162/) <br>
-[A Smarter Way To Learn JavaScript](https://www.asmarterwaytolearn.com/js/) <br>
+[Spoonacular](https://spoonacular.com/food-api) <br>
 [JSHint](https://jshint.com/) <br>
-[How To Style Images With Markdown Blog](https://www.xaprb.com/blog/how-to-style-images-with-markdown/) <br>
-[W3Schools](https://www.w3schools.com/js/default.asp) <br>
+[OpenWeather](https://openweathermap.org/api)
+
 
 ### License
 ##### Distributed under the MIT License. See `LICENSE` for more information.
