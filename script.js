@@ -57,10 +57,8 @@ function getRecipeID() {
         a.attr("href", response.sourceUrl);
         a.attr("target", "blank");
         a.text(response.sourceUrl);
-        var button = $("<button>");
-        button.text("Save me?");
+
         $(".tipsPanel").append(a);
-        $(".tipsPanel").append(button);
 
         // var listItems = $("<li>").text(response.extendedIngredients[i].name);
         for (var i = 0; i < response.extendedIngredients.length; i++) {
@@ -81,7 +79,7 @@ function getRecipeID() {
   });
 }
 
-$("button").on("click", function () {
+$("#searchBtn").on("click", function () {
   $(".ingredientsList").empty();
   $(".instructionsList").empty();
   $(".tipsPanel").empty();
