@@ -7,6 +7,8 @@
   <!-- Foundation Compressed CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
+  <!-- W-3 Modal CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
@@ -24,15 +26,18 @@
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
           <li id="menu-text" style="color: red;"><i class="fas fa-utensils"></i></li>
-          <li><a id="navLink1" style="color: red;" href="#">Featured Recipe</a></li>
-          <li><a id="navLink2" style="color: red;" href="#">Saved Recipes</a></li>
+
+          <!-- NEW ADDED LINKS TO NAVLINKS -->
+
+          <li><a id="navLink1" href="https://spoonacular.com/articles/academy#Basics">FOOD ACADEMY</a></li>
+          <li><a id="navLink2" href="https://spoonacular.com/articles/featured-recipes">FEATURED RECIPES</a></li>
         </ul>
       </div>
       <div class="top-bar-right">
         <ul class="menu">
           <li><input id="searchInput" type="search" placeholder="Search For A Recipe"></li>
           <li><button id="searchBtn" type="button" class="button hover radius shadow"
-              style="background-color: red;">Search</button></li>
+              style="background-color: red;">SEARCH</button></li>
         </ul>
       </div>
     </div>
@@ -50,10 +55,31 @@
         <p class="hero-lead" style="color:rgb(255, 255, 255); text-align: center;"><em>Recipes for people with food
             sensitivity.</em> </p>
         <!-- <button type="hero-button" class="button radius bordered shadow warning" style="text-align: center; background-color: rgb(255, 255, 255); color: black;"></button> -->
-        <a href="#" type="heroButton" id="buttonAbout" class="button radius bordered shadow warning"
+        <!-- <a href="#" type="heroButton" id="buttonAbout" class="button radius bordered shadow warning"
           style="color: white;">Learn More</a>
         <a href="#" type="heroButton" id="buttonMore" class="button radius bordered shadow warning"
-          style="color: white;">View Recipes</a>
+          style="color: white;">View Recipes</a> -->
+        <div class="w3-container">
+          <button onclick="document.getElementById('id01').style.display='block'"
+            class="w3-button w3-text-white w3-orange">HOW TO GET STARTED</button>
+
+          <div id="id01" class="w3-modal w3-animate-opacity">
+            <div class="w3-modal-content w3-card-4">
+              <header class="w3-container w3-white">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                  class="w3-button w3-large">&times;</span>
+                <h2>How To Use Picky Eater Recipe Finder, It's Easy As Pie!</h2>
+              </header>
+              <div class="w3-container">
+                <p>1. Enter the type of recipe you want to find in <b>SEARCH</b>.</p>
+                <p>2. Toggle <b>YES/NO</b> for criteria including: gluten-free, vegan or dairy-free.</p>
+                <p>3. View your recipe! Click on the link at the bottom of the page for more details.</p>
+                <p>Want to know more about recipes, diet trends or need help with measurement conversions? <br>
+                  Visit the FOOD ACADEMY and FEATURED RECIPES above!</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -61,6 +87,7 @@
   <!-- Switches for user input -->
 
   <section class="recipeSwitches">
+    <h2 class="toggleHeader" style="text-align: center;">Select Recipe Criteria:</h2>
     <div id="pickySwitch" class="container grid-x grid-padding-x align-center">
       <div id="switch1" class="switch tiny">
         <p>Do you want gluten-free?</p>
@@ -99,6 +126,7 @@
 
   <section class="renderedRecipe">
     <div id="recipeContainer" class="container">
+      <div id="noResult" style="display: none;"></div>
       <!-- THE BELOW TWO LINES ARE DIFFERENT WAYS TO RENDER A RECIPE PHOTO - FIRST ONE IS COMMENTED OUT FOR BREVITY-->
       <!-- <img class="thumbnail" src="assets/healthyfood.jpg" alt="photo of healthy food"> -->
       <a href=""><img id="img" src="" aria-label="photo of healthy recipe"></a>
@@ -109,11 +137,11 @@
         </div>
         <br>
 
-        <!-- Recipe ingredients -->              
+        <!-- Recipe ingredients -->
 
         <div id="recipeIngredients" class="container">
           <h2 id="ingredients"></h2>
-          <ul class="ingredientsList">            
+          <ul class="ingredientsList">
           </ul>
         </div>
         <br>
@@ -122,7 +150,7 @@
 
         <div id="recipeInstructions" class="container">
           <h2 id="instructions"></h2>
-          <ol class="instructionsList">            
+          <ol class="instructionsList">
           </ol>
         </div>
         <br>
@@ -153,7 +181,7 @@
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
     integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <!-- Local JS -->
 
   <script src="script.js"></script>
