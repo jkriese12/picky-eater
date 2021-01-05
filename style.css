@@ -84,6 +84,10 @@ a:hover {
     font-family: 'Gochi Hand', cursive;
 }
 
+div#recipeIngredients {
+    text-align: center;
+}
+
 /* Displays switches horizontally on larger screens using display: flex; + flex-direction: row */
 
 #pickySwitch {
