@@ -1,11 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hello</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Foundation Compressed CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
+  <!-- W-3 Modal CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/792cbaa3d1.js" crossorigin="anonymous"></script>
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <title>Picky Eater</title>
+</head>
+
+<body>
+  <!-- Navbar  -->
+  <nav class="navbar">
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li id="menu-text" style="color: red;"><i class="fas fa-utensils"></i></li>
+
+          <!-- Added navlinks -->
+
+          <li><a id="navLink1" href="https://spoonacular.com/articles/academy#Basics" target="_blank">FOOD ACADEMY</a>
+          </li>
+          <li><a id="navLink2" href="https://spoonacular.com/articles/featured-recipes" target="_blank">FEATURED
+              RECIPES</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><input id="searchInput" type="search" placeholder="Search For A Recipe"></li>
+          <li><button id="searchBtn" type="button" class="button hover radius shadow"
+              style="background-color: red;">SEARCH</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero image -->
+
+  <header>
+    <div class="hero-image" style="color: rgb(255, 255, 255);">
+      <div class="hero-text" style="text-align: center;">
+        <h1 class="hero-title">PICKY<svg class="heart" viewBox="0 0 32 29.6">
+            <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+          </svg>EATER</h1>
+        <p class="hero-lead" style="color:rgb(255, 255, 255); text-align: center;"><em>Recipes for people with food
+            sensitivity.</em> </p>
+        <!-- <button type="hero-button" class="button radius bordered shadow warning" style="text-align: center; background-color: rgb(255, 255, 255); color: black;"></button> -->
+        <!-- <a href="#" type="heroButton" id="buttonAbout" class="button radius bordered shadow warning"
+          style="color: white;">Learn More</a>
+        <a href="#" type="heroButton" id="buttonMore" class="button radius bordered shadow warning"
+          style="color: white;">View Recipes</a> -->
+        <div class="w3-container">
+          <button onclick="document.getElementById('id01').style.display='block'"
+            class="w3-button w3-text-white w3-orange">HOW TO GET STARTED</button>
+
+          <div id="id01" class="w3-modal w3-animate-opacity">
+            <div class="w3-modal-content w3-card-4">
+              <header class="w3-container w3-white">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                  class="w3-button w3-large">&times;</span>
+                <h2>How To Use Picky Eater Recipe Finder, It's Easy As Pie!</h2>
+              </header>
+              <div class="w3-container">
+                <p>1. Enter the type of recipe you want to find in the <b>SEARCH</b> bar.</p>
+                <p>2. Toggle <b>YES/NO</b> for criteria including: gluten-free, vegan or dairy-free.</p>
+                <p><em>(Added bonus, you can choose to view current weather conditions in Tahiti!)</em></p>
+                <p>3. View your recipe! Click on the link at the bottom of the page for more details.</p>
+                <p>Want to know more about recipes, diet trends or need help with measurement conversions? <br>
+                  Visit the FOOD ACADEMY and FEATURED RECIPES above!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Switches for user input -->
+
+  <section class="recipeSwitches">
+    <h2 class="toggleHeader" style="text-align: center;">Select Recipe Criteria:</h2>
+    <div id="pickySwitch" class="container grid-x grid-padding-x align-center">
+      <div id="switch1" class="switch tiny">
+        <p>Do you want gluten-free?</p>
+        <input class="switch-input" id="tinySwitch" type="checkbox" name="glutenSwitch">
+        <label class="switch-paddle" for="tinySwitch">
+          <span class="show-for-sr">gluten-free?</span>
+          <span class="switch-active" aria-hidden="true">Yes</span>
+          <span class="switch-inactive" aria-hidden="true">No</span>
+        </label>
+      </div>
+
+      <div id="switch2" class="switch tiny">
+        <p>Do you want vegan?</p>
+        <input class="switch-input" id="tinySwitch2" type="checkbox" name="veganSwitch">
+        <label class="switch-paddle" for="tinySwitch2">
+          <span class="show-for-sr">vegan?</span>
+          <span class="switch-active" aria-hidden="true">Yes</span>
+          <span class="switch-inactive" aria-hidden="true">No</span>
+        </label>
+      </div>
+
+      <div id="switch3" class="switch tiny">
+        <p>Do you want dairy-free?</p>
+        <input class="switch-input" id="tinySwitch3" type="checkbox" name="dairySwitch">
+        <label class="switch-paddle" for="tinySwitch3">
+          <span class="show-for-sr">dairy-free?</span>
+          <span class="switch-active" aria-hidden="true">Yes</span>
+          <span class="switch-inactive" aria-hidden="true">No</span>
+        </label>
+      </div>
+
+      <div id="switch4" class="switch tiny">
+        <p>Weather in Tahiti?</p>
+        <input class="switch-input" id="tinySwitch4" type="checkbox" name="tahitiSwitch">
+        <label class="switch-paddle" for="tinySwitch4">
+          <span class="show-for-sr">Tahiti weather?</span>
+          <span class="switch-active" aria-hidden="true">Yes</span>
+          <span class="switch-inactive" aria-hidden="true">No</span>
+        </label>
+      </div>
+    </div>
+    <br>
+  </section>
+
+  <!-- Rendered recipe section-->
+
+  <section class="renderedRecipe">
+    <div id="recipeContainer" class="container">
+      <div id="noResult" style="display: none;">Your search did not generate any results. Please try again.</div>
+      <!-- THE BELOW TWO LINES ARE DIFFERENT WAYS TO RENDER A RECIPE PHOTO - FIRST ONE IS COMMENTED OUT FOR BREVITY-->
+      <!-- <img class="thumbnail" src="assets/healthyfood.jpg" alt="photo of healthy food"> -->
+      <div id="imgContainer">
+        <a href=""><img id="img" src="" aria-label="photo of healthy recipe"></a>
+      </div>
+      <div id="recipeScroll" class="cell medium-8 medium-cell-block-y">
+        <h2 id="recipeName" class="recipeH2" style="text-align: center;"></h2>
+        <div id="recipeSummary" aria-placeholder="Recipe summary goes here">
+          <p class="summaryPanel"></p>
+        </div>
+        <br>
+
+        <!-- Recipe ingredients -->
+
+        <div id="recipeIngredients" class="container">
+          <h2 id="ingredients"></h2>
+
+          <!-- Added container to better format ingredient rendering across all screen sizes -->
+
+          <div class="listContainer">
+            <ul class="ingredientsList">
+            </ul>
+          </div>
+        </div>
+        <br>
+
+        <!-- Recipe instructions -->
+
+        <div id="recipeInstructions" class="container">
+          <h2 id="instructions"></h2>
+          <ol class="instructionsList">
+          </ol>
+        </div>
+        <br>
+
+        <!-- Recipe tips -->
+
+        <div id="recipeTips" class="container">
+          <h2 id="recipeTips" class="tipsH2" style="text-align: center;"></h2>
+          <div id="tipsSummary" aria-placeholder="Recipe tips go here">
+            <p class="tipsPanel"></p>
+          </div>
+        </div>
+      </div>
+      <br>
+  </section>
+
+  <!-- Footer content -->
+
+  <footer id="pickyFooter" style="width: 100%;">
+    <div class="cell shrink footer" style="text-align: center;">
+      <div class="footer" style="background-color: white; color: black;">
+        <h6>&#169; Picky Eater Dev Team 2020</h6>
+      </div>
+  </footer>
+
+  <!-- Compressed JavaScript -->
+
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+    integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  
+  <!-- Local JS -->
+
+  <script src="script.js"></script>
+</body>
+
 </html>
