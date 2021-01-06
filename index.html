@@ -29,8 +29,10 @@
 
           <!-- Added navlinks -->
 
-          <li><a id="navLink1" href="https://spoonacular.com/articles/academy#Basics" target="_blank">FOOD ACADEMY</a></li>
-          <li><a id="navLink2" href="https://spoonacular.com/articles/featured-recipes" target="_blank">FEATURED RECIPES</a></li>
+          <li><a id="navLink1" href="https://spoonacular.com/articles/academy#Basics" target="_blank">FOOD ACADEMY</a>
+          </li>
+          <li><a id="navLink2" href="https://spoonacular.com/articles/featured-recipes" target="_blank">FEATURED
+              RECIPES</a></li>
         </ul>
       </div>
       <div class="top-bar-right">
@@ -71,8 +73,9 @@
                 <h2>How To Use Picky Eater Recipe Finder, It's Easy As Pie!</h2>
               </header>
               <div class="w3-container">
-                <p>1. Enter the type of recipe you want to find in <b>SEARCH</b>.</p>
+                <p>1. Enter the type of recipe you want to find in the <b>SEARCH</b> bar.</p>
                 <p>2. Toggle <b>YES/NO</b> for criteria including: gluten-free, vegan or dairy-free.</p>
+                <p><em>(Added bonus, you can choose to view current weather conditions in Tahiti!)</em></p>
                 <p>3. View your recipe! Click on the link at the bottom of the page for more details.</p>
                 <p>Want to know more about recipes, diet trends or need help with measurement conversions? <br>
                   Visit the FOOD ACADEMY and FEATURED RECIPES above!</p>
@@ -141,7 +144,7 @@
       <!-- <img class="thumbnail" src="assets/healthyfood.jpg" alt="photo of healthy food"> -->
       <div id="imgContainer">
         <a href=""><img id="img" src="" aria-label="photo of healthy recipe"></a>
-      </div> 
+      </div>
       <div id="recipeScroll" class="cell medium-8 medium-cell-block-y">
         <h2 id="recipeName" class="recipeH2" style="text-align: center;"></h2>
         <div id="recipeSummary" aria-placeholder="Recipe summary goes here">
@@ -153,8 +156,13 @@
 
         <div id="recipeIngredients" class="container">
           <h2 id="ingredients"></h2>
-          <ul class="ingredientsList">
-          </ul>
+
+          <!-- Added container to better format ingredient rendering across all screen sizes -->
+
+          <div class="listContainer">
+            <ul class="ingredientsList">
+            </ul>
+          </div>
         </div>
         <br>
 
@@ -194,6 +202,7 @@
     integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  
   <!-- Local JS -->
 
   <script src="script.js"></script>
