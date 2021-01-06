@@ -38,8 +38,9 @@ WHEN they perform a subsequent search, their prior search will persist and show 
 
 ### Demo
 
-This video clip demonstrates the application's rendering and functionality. <br>
-![See how it works!](https://github.com/jkriese12/picky-eater/blob/frontEnd/assets/pickyE.GIF) 
+##### This video clip demonstrates the application's rendering and functionality: <br>
+
+![See how it works!](https://github.com/jkriese12/picky-eater/blob/frontEnd/assets/pickyE.GIF)
 
 ##### The following are screenshots of the application and overview of its functionality:
 <img src="assets/mainView.png" alt="screenshot" title="screenshot" width="400" height="auto">
@@ -66,12 +67,13 @@ Foundation 6 <br>
    How To Use Picky Eater Recipe Finder, It's Easy As Pie!
 1. Enter the type of recipe you want to find in SEARCH.
 
-2. Toggle YES/NO for criteria including: gluten-free, vegan or dairy-free.
+2. Toggle YES/NO for criteria including: gluten-free, vegan or dairy-free. 
+(Hey, while you're at it, why not also get the current weather conditions in Tahiti?)
 
 3. View your recipe! Click on the link at the bottom of the page for more details.
 
 Want to know more about recipes, diet trends or need help with measurement conversions?
-Visit the FOOD ACADEMY and FEATURED RECIPES above!
+Visit the FOOD ACADEMY and FEATURED RECIPES links!
    ```
    
 
