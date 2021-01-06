@@ -78,12 +78,15 @@ function getRecipeID() {
     if (response.results.length > 0) {
       var storage = localStorage.getItem("lastSearched");
       var storageLink = localStorage.getItem("searchedUrl");
+      // var storageTextContain = $("<div>").addClass("localContain");
       var storageText = $("<div>")
-        .text("You last searched for " + storage)
-        .css({ "text-align": "center", "font-size": "30px", "margin-top": "25px" })
+        .text(" You last searched for " + storage)
+        .css({ "text-align": "center", "font-size": "25px", "margin-top": "25px" })
         .attr("href", storageLink)
+        .attr("target", "blank")
         .addClass("local");
       $(".toggleHeader").append(storageText);
+      // $(".localContain").append(storageText);
       var foodID = response.results[0].id;
       var urlID =
         "https://api.spoonacular.com/recipes/" +
@@ -143,14 +146,18 @@ $("#searchBtn").on("click", function () {
   $("#img").attr("src", "");
   $("#noResult").text("");
   $(".weather").text("");
-  $(".local").empty("");
+  $(".local").empty();
+  $(".localContain").empty();
   getRecipeID();
 });
 var storage = localStorage.getItem("lastSearched");
 var storageLink = localStorage.getItem("searchedUrl");
+// var storageTextContain = $("<div>").addClass("localContain");
 var storageText = $("<div>")
-  .text("You last searched for " + storage)
-  .css({ "text-align": "center", "font-size": "30px", "margin-top": "25px" })
+  .text(" You last searched for " + storage)
+  .css({ "text-align": "center", "font-size": "25px", "margin-top": "25px" })
   .attr("href", storageLink)
+  .attr("target", "blank")
   .addClass("local");
 $(".toggleHeader").append(storageText);
+// $(".localContain").append(storageText);
