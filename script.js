@@ -66,7 +66,7 @@ function getRecipeID() {
   }
   $.ajax({
     url:
-      "https://api.spoonacular.com/recipes/complexSearch?apiKey=bead57aed9e1420dbed8834d45b0f26e" +
+      "https://api.spoonacular.com/recipes/complexSearch?apiKey=d62f94a01ecd492192a2ac5bb4bf78f9" +
       dietChoice +
       "&addRecipeInformation=true&query=" +
       id,
@@ -92,7 +92,7 @@ function getRecipeID() {
       var urlID =
         "https://api.spoonacular.com/recipes/" +
         foodID +
-        "/information?apiKey=bead57aed9e1420dbed8834d45b0f26e";
+        "/information?apiKey=d62f94a01ecd492192a2ac5bb4bf78f9";
       $.ajax({
         url: urlID,
         method: "GET",
