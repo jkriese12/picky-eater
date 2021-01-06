@@ -164,11 +164,16 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
+}
+
+.listContainer {
+    padding-left: 24rem;
+    max-width: 70%;
+    text-align: left;
+}
 
 li.ingredient  {
     background-color: white;
-    text-align: center;
 }
 
 #instructions {
@@ -263,6 +268,12 @@ li.step::marker {
     #buttonMore {
         font-size: 1rem;
     }
+
+    .listContainer {
+        padding-left: 4rem;
+        max-width: 100%;
+        text-align: auto;
+    }
     
 }
 
@@ -304,6 +315,12 @@ li.step::marker {
         padding-bottom: 2rem;
         font-size: 1rem;
     }
+
+    .listContainer {
+        padding-left: 16rem;
+        max-width: 80%;
+        text-align: auto;
+    }
 }
 
 /* Large and up */
@@ -340,6 +357,12 @@ li.step::marker {
         padding-left: 4.5rem;
         padding-bottom: 4.5rem;
         font-size: 1.25rem;
+    }
+
+    .listContainer {
+        padding-left: 40rem;
+        max-width: 70%;
+        text-align: auto;
     }
 }
 
