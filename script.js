@@ -162,3 +162,4 @@ var storageText = $("<div>")
   .addClass("local");
 $(".toggleHeader").append(storageText);
 // $("#localContain").append(storageText);
+// Done
