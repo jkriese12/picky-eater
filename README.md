@@ -33,7 +33,6 @@ WHEN they enter criteria for viewing a recipe, they can also opt to view current
 WHEN they are finished viewing recipes, they can choose to look up more information on nutrition, measurement conversions, diet trends in a food academy. 
 THEN they can also view featured recipes. 
 WHEN they perform a subsequent search, their prior search will persist and show on the screen as the last searched item.
-
 ```
 
 ### Demo
