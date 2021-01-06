@@ -236,11 +236,11 @@ li.step::marker {
     
     #switch3 {        
         padding-right: 2rem;
-        padding-bottom: 3rem;
+        padding-bottom: 5rem;
     }
 
     #switch4 {
-        padding-top: 2rem;
+        padding-top: 0rem;
         padding-right: 2rem;
         padding-bottom: 3rem;
     }
