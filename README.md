@@ -5,7 +5,7 @@
 
 ### Project Links
 [Repo Link](https://github.com/jkriese12/picky-eater) <br>
-[GitHub Project Link](https://placeholder)
+[GitHub Project Link](https://jkriese12.github.io/picky-eater/)
 
 ### Project Team
 
@@ -89,7 +89,8 @@ Visit the FOOD ACADEMY and FEATURED RECIPES links!
 [JSHint](https://jshint.com/) <br>
 [OpenWeather](https://openweathermap.org/api) <br>
 [A How-To Guide for Modal Boxes](https://medium.com/@nerdplusdog/a-how-to-guide-for-modal-boxes-with-javascript-html-and-css-6a49d063987e) <br>
-[Moment.js](https://momentjs.com/guides/)
+[Moment.js](https://momentjs.com/guides/) <br>
+[Unsplash](https://unsplash.com/)
 
 
 ### License
