@@ -1,3 +1,5 @@
+/* Adding GoogleFont Gochi Hand to document */
+
 * {
     font-family: 'Gochi Hand', cursive;
 }
@@ -22,6 +24,8 @@ h6 {
     font-family: 'Gochi Hand', cursive;
     font-size: 1rem; 
 }
+
+/* Hero and navbar styling */
 
 .hero-image {
     background-image: url("assets/healthyhero.jpg");
@@ -236,11 +240,11 @@ li.step::marker {
     
     #switch3 {        
         padding-right: 2rem;
-        padding-bottom: 3rem;
+        padding-bottom: 5rem;
     }
 
     #switch4 {
-        padding-top: 2rem;
+        padding-top: 0rem;
         padding-right: 2rem;
         padding-bottom: 3rem;
     }
@@ -276,9 +280,6 @@ li.step::marker {
     }
     
 }
-
-/* Medium and up */
-@media screen and (min-width: 40em) {}
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -361,10 +362,8 @@ li.step::marker {
 
     .listContainer {
         padding-left: 40rem;
-        max-width: 70%;
+        max-width: 80%;
         text-align: auto;
     }
 }
 
-/* Large only */
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

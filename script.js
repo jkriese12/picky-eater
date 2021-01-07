@@ -73,12 +73,11 @@ function getRecipeID() {
     method: "GET",
     // Getting specific ID of recipe to use in next AJAX call
   }).then(function (response) {
-    console.log(response);
     // Only calling for recipe if there is a recipe available based on user search
     if (response.results.length > 0) {
+      // Getting last searched item from local storage
       var storage = localStorage.getItem("lastSearched");
       var storageLink = localStorage.getItem("searchedUrl");
-      // var storageTextContain = $("<div>").attr("id", "localContain");
       var storageText = $("<div>")
         .text(" You last searched for " + storage)
         .css({ "text-align": "center", "font-size": "25px", "margin-top": "25px" })
@@ -86,8 +85,7 @@ function getRecipeID() {
         .attr("target", "blank")
         .addClass("local");
       $(".toggleHeader").append(storageText);
-      // $("#localContain").append(storageText);
-
+      // Using unique food ID to get specific search
       var foodID = response.results[0].id;
       var urlID =
         "https://api.spoonacular.com/recipes/" +
@@ -97,8 +95,6 @@ function getRecipeID() {
         url: urlID,
         method: "GET",
       }).then(function (response) {
-        console.log(response);
-        console.log(response.sourceUrl);
         $("#ingredients").text("Recipe Ingredients:");
         $("#instructions").text("Recipe Instructions:");
         $("#recipeName").text(response.title);
@@ -107,11 +103,11 @@ function getRecipeID() {
         a.attr("href", response.sourceUrl);
         a.attr("target", "blank");
         a.text(response.sourceUrl);
-
         $(".tipsPanel").append(a);
+        // Sets local storage item for last searched for next search or page load
         localStorage.setItem("lastSearched", response.title);
         localStorage.setItem("searchedUrl", response.sourceUrl);
-
+        // For loops to gather array information for ingredients and instructions
         for (var i = 0; i < response.extendedIngredients.length; i++) {
           JSON.stringify(response.extendedIngredients[i].name);
           var listItem = $("<li>");
@@ -151,6 +147,7 @@ $("#searchBtn").on("click", function () {
   $("#localContain").empty();
   getRecipeID();
 });
+// Calls local storage item on page initial load
 var storage = localStorage.getItem("lastSearched");
 var storageLink = localStorage.getItem("searchedUrl");
 var storageTextContain = $("<div>").attr("id", "localContain");
@@ -161,4 +158,3 @@ var storageText = $("<div>")
   .attr("target", "blank")
   .addClass("local");
 $(".toggleHeader").append(storageText);
-// $("#localContain").append(storageText);
